@@ -1,14 +1,8 @@
 :root {
-    --bg-color-dark: #0f172a;
-    --bg-color-light: #1e293b;
-    --primary-color: #8b5cf6;
-    --primary-color-hover: #7c3aed;
-    --secondary-color: #3b82f6;
-    --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
-    --glass-bg: rgba(30, 41, 59, 0.7);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    
+    --glass-bg: rgba(220, 229, 242, 0.7);
+    
+    --glass-shadow: 0 8px 32px 0 rgba(144, 249, 118, 0.215);
     
     --c-color: #3b82f6;
     --py-color: #f59e0b;
@@ -32,7 +26,7 @@ html {
 }
 
 body {
-    background-color: var(--bg-color-dark);
+    background-color:white;
     color: var(--text-primary);
     overflow-x: hidden;
     position: relative;
@@ -69,16 +63,10 @@ h1, h2, h3, h4 {
     font-family: 'Poppins', sans-serif;
 }
 
-.glass-effect {
-    background: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--glass-border);
-    box-shadow: var(--glass-shadow);
-}
+
 
 .text-gradient {
-    background: linear-gradient(to right, #8b5cf6, #3b82f6);
+    background: linear-gradient(to right, #052106c6, #51e680);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -98,16 +86,19 @@ h1, h2, h3, h4 {
     align-items: center;
     gap: 8px;
     font-size: 14px;
+    text-decoration: wavy;
+
 }
+
 
 .primary-btn {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+    color: rgb(13, 0, 10);
+    box-shadow: 0 4px 15px rgba(138, 92, 246, 0.556);
 }
 
 .primary-btn:hover {
-    transform: translateY(-2px);
+    transform: translateY(-8px);
     box-shadow: 0 6px 20px rgba(139, 92, 246, 0.6);
 }
 
@@ -156,6 +147,7 @@ h1, h2, h3, h4 {
     border-top: none;
     border-left: none;
     border-right: none;
+    background-color: #ffffff;
 }
 
 .nav-container {
@@ -173,7 +165,7 @@ h1, h2, h3, h4 {
     gap: 10px;
     font-size: 24px;
     font-weight: 700;
-    color: white;
+    color: rgb(66, 80, 11);
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
@@ -255,45 +247,11 @@ h1, h2, h3, h4 {
     align-items: center;
 }
 
-.floating-card {
-    position: absolute;
-    padding: 16px 24px;
-    border-radius: 12px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 18px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    animation: float 6s ease-in-out infinite;
-}
 
-.card-1 {
-    top: 20%;
-    left: 10%;
-    color: var(--py-color);
-    animation-delay: 0s;
-}
 
-.card-1 i { font-size: 24px; }
 
-.card-2 {
-    top: 50%;
-    right: 15%;
-    color: var(--ai-color);
-    animation-delay: 2s;
-}
 
-.card-2 i { font-size: 24px; }
 
-.card-3 {
-    bottom: 15%;
-    left: 20%;
-    color: var(--html-color);
-    animation-delay: 4s;
-}
-
-.card-3 i { font-size: 24px; }
 
 @keyframes float {
     0% { transform: translateY(0px); }
