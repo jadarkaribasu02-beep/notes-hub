@@ -32,9 +32,7 @@
                 <a href="#subjects">Subjects</a>
                 <button id="openUploadBtn" class="btn primary-btn hidden"><i class="fa-solid fa-upload"></i> Upload
                     Notes</button>
-                <button id="openAuthBtn" class="btn ghost-btn"><i class="fa-solid fa-user"></i> Login</button>
-                <button id="logoutBtn" class="btn ghost-btn hidden"><i class="fa-solid fa-sign-out-alt"></i>
-                    Logout</button>
+               
             </div>
         </div>
     </nav>
@@ -51,7 +49,7 @@
                     resources here. Feel free to explore,and contribute!</p>
                 <div class="hero-actions">
                     <a href="www.google.com" class="btn primary-btn btn-large">know more aboout me</a>
-                    <button id="heroUploadBtn" class="btn secondary-btn btn-large">Share Notes</button>
+                    
                 </div>
             </div>
            
@@ -70,42 +68,43 @@
                     <div class="card-icon c-color"><i class="fa-solid fa-c"></i></div>
                     <h3>C Programming</h3>
                     <p>Modules 1 to 5</p>
-                    <button class="btn ghost-btn">View Notes <i class="fa-solid fa-arrow-right"></i></button>
+                   
+                    <button class="btn ghost-btn" ><a href="www.gg.com">View Notes</a> <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
 
                 <div class="subject-card glass-effect" data-subject="python">
                     <div class="card-icon py-color"><i class="fa-brands fa-python"></i></div>
                     <h3>Python</h3>
                     <p>Modules 1 to 5</p>
-                    <button class="btn ghost-btn">View Notes <i class="fa-solid fa-arrow-right"></i></button>
+                    <button class="btn ghost-btn"><a href="www.gg.com">View Notes</a> <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
 
                 <div class="subject-card glass-effect" data-subject="maths">
                     <div class="card-icon math-color"><i class="fa-solid fa-square-root-variable"></i></div>
                     <h3>Maths</h3>
                     <p>Modules 1 to 5</p>
-                    <button class="btn ghost-btn">View Notes <i class="fa-solid fa-arrow-right"></i></button>
+                    <button class="btn ghost-btn"><a href="www.gg.com">View Notes</a> <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
 
                 <div class="subject-card glass-effect" data-subject="eee">
                     <div class="card-icon eee-color"><i class="fa-solid fa-bolt"></i></div>
                     <h3>EEE</h3>
                     <p>Modules 1 to 5</p>
-                    <button class="btn ghost-btn">View Notes <i class="fa-solid fa-arrow-right"></i></button>
+                    <button class="btn ghost-btn"><a href="www.gg.com">View Notes</a><i class="fa-solid fa-arrow-right"></i></button>
                 </div>
 
                 <div class="subject-card glass-effect" data-subject="ai">
                     <div class="card-icon ai-color"><i class="fa-solid fa-brain"></i></div>
                     <h3>Artificial Intelligence</h3>
                     <p>Modules 1 to 5</p>
-                    <button class="btn ghost-btn">View Notes <i class="fa-solid fa-arrow-right"></i></button>
+                    <button class="btn ghost-btn"><a href="www.gg.com">View Notes</a><i class="fa-solid fa-arrow-right"></i></button>
                 </div>
 
                 <div class="subject-card glass-effect" data-subject="chemistry">
                     <div class="card-icon chem-color"><i class="fa-solid fa-flask"></i></div>
                     <h3>Chemistry</h3>
                     <p>Modules 1 to 5</p>
-                    <button class="btn ghost-btn">View Notes <i class="fa-solid fa-arrow-right"></i></button>
+                    <button class="btn ghost-btn"><a href="www.gg.com">View Notes</a><i class="fa-solid fa-arrow-right"></i></button>
                 </div>
 
                 <div class="subject-card glass-effect" data-subject="html">
@@ -169,55 +168,7 @@
                 <h2>Upload <span class="text-gradient">Note</span></h2>
                 <button class="close-btn" id="closeUploadBtn"><i class="fa-solid fa-xmark"></i></button>
             </div>
-            <div class="modal-body">
-                <form id="uploadForm">
-                    <div class="form-group">
-                        <label for="subjectSelect">Subject</label>
-                        <select id="subjectSelect" required>
-                            <option value="" disabled selected>Select a subject</option>
-                            <option value="c">C Programming</option>
-                            <option value="python">Python</option>
-                            <option value="maths">Maths</option>
-                            <option value="eee">EEE</option>
-                            <option value="ai">Artificial Intelligence</option>
-                            <option value="chemistry">Chemistry</option>
-                            <option value="html">HTML</option>
-                            <option value="css">CSS</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group" id="moduleGroup">
-                        <label for="moduleSelect">Module</label>
-                        <select id="moduleSelect" required>
-                            <option value="" disabled selected>Select a module</option>
-                            <option value="1">Module 1</option>
-                            <option value="2">Module 2</option>
-                            <option value="3">Module 3</option>
-                            <option value="4">Module 4</option>
-                            <option value="5">Module 5</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="noteTitle">Note Title (e.g. Chapter 1 Summary)</label>
-                        <input type="text" id="noteTitle" placeholder="Enter title" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="fileUpload">File Attachment (Mock)</label>
-                        <div class="file-upload-wrapper">
-                            <input type="file" id="fileUpload" accept=".pdf,.doc,.docx" required>
-                            <div class="custom-file-upload">
-                                <i class="fa-solid fa-cloud-arrow-up"></i>
-                                <span>Drag & drop or Browse</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="btn primary-btn fluid-btn">Upload Note <i
-                            class="fa-solid fa-paper-plane"></i></button>
-                </form>
-            </div>
+            
         </div>
     </div>
 
