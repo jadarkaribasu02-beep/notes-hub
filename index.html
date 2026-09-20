@@ -4,167 +4,307 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Notes Hub</title>
+    <title>Notes Hub | Academic Notes</title>
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Poppins:wght@500;700&display=swap"
-        rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!-- Background Elements -->
-    <div class="bg-shape bg-shape-1"></div>
-    <div class="bg-shape bg-shape-2"></div>
+    <!-- Soft Light Pastel Background Blobs -->
+    <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
 
-    <!-- Navigation -->
-    <nav class="navbar glass-effect">
+    <!-- Header / Branding Bar -->
+    <header class="navbar">
         <div class="nav-container">
             <a href="#" class="logo">
-                <i class="fa-solid fa-layer-group"></i>
-                karibasu<span class="highlight">jadar</span>
+                <div class="logo-icon">
+                    <i class="fa-solid fa-book-bookmark"></i>
+                </div>
+                <span>Notes<span class="logo-accent">Hub</span></span>
             </a>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#subjects">Subjects</a>
-                <button id="openUploadBtn" class="btn primary-btn hidden"><i class="fa-solid fa-upload"></i> Upload
-                    Notes</button>
-               
+            <div class="author-badge">
+                <span class="badge-dot"></span>
+                <span>Karibasu Jadar</span>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero section-spacing">
-            <div class="hero-content glass-effect">
-                <div class="badge fade-up delay-1">Hello there! <span class="wave">👋</span></div>
-                <h1 class="fade-up delay-2">Hi, my name is <br><span class="text-gradient gradient-shift">Karibasu
-                        Jadar</span></h1>
-                <p class="fade-up delay-3">I'm a CSE student from JITD. I will share all my study notes and
-                    resources here. Feel free to explore,and contribute!</p>
-                <div class="hero-actions">
-                    <a href="https://jadarkaribasu02-beep.github.io/portfolioka/" class="btn primary-btn btn-large">know more aboout me</a>
-                    
-                </div>
-            </div>
-           
+    <!-- Main Subject Hub Content -->
+    <main class="main-container">
+        <!-- Minimal Page Header -->
+        <section class="hub-header">
+            <h1>Explore <span class="gradient-text">Study Notes</span></h1>
+            <p>Access notes, module PDFs, and question banks for all 8 subjects below.</p>
         </section>
 
-        <!-- Subjects Section -->
-        <section id="subjects" class="section-spacing">
-            <div class="section-header">
-                <h2>Explore <span class="text-gradient">Subjects</span></h2>
-
+        <!-- Search & Category Filter Toolbar -->
+        <div class="toolbar-wrapper">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Search subjects or modules..." autocomplete="off">
+                <button id="clearSearchBtn" class="clear-btn hidden"><i class="fa-solid fa-xmark"></i></button>
             </div>
 
-            <div class="subjects-grid">
-                <!-- Subject Cards injected or defined here -->
-                <div class="subject-card glass-effect" data-subject="c">
-                    <div class="card-icon c-color"><i class="fa-solid fa-c"></i></div>
+            <div class="category-filters">
+                <button class="filter-chip active" data-category="all">All (8)</button>
+                <button class="filter-chip" data-category="programming">Programming</button>
+                <button class="filter-chip" data-category="engineering">Core Engg</button>
+                <button class="filter-chip" data-category="science">Science & Math</button>
+            </div>
+        </div>
+
+        <!-- 8 Subject Cards Grid -->
+        <section class="subjects-grid" id="subjectsGrid">
+            
+            <!-- Subject 1: C Programming -->
+            <div class="subject-card" data-category="programming" data-title="c programming" data-subject-id="c">
+                <div class="card-top">
+                    <div class="subject-icon icon-bg-c">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <span class="category-badge">Programming</span>
+                </div>
+                <div class="card-body">
                     <h3>C Programming</h3>
-                    <p>Modules 1 to 5</p>
-                   
-                    <button class="btn ghost-btn" ><a href="www.gg.com">View Notes</a> <i class="fa-solid fa-arrow-right"></i></button>
+                    <p>Modules 1 to 5, pointers, structures & file operations.</p>
                 </div>
-
-                <div class="subject-card glass-effect" data-subject="python">
-                    <div class="card-icon py-color"><i class="fa-brands fa-python"></i></div>
-                    <h3>Python</h3>
-                    <p>direct links
-                        <br>module 1<a href="https://www.scribd.com/document/918957332/Python-Progr-Module-1-Final-1BPLCK105B-2025-scheme"> click here</a></p>
-                    <button class="btn ghost-btn"><a href="https://drive.google.com/drive/u/1/folders/1txybjRMtiHbXDvub4I5YscUVQgk5m-k7">View Notes</a> <i class="fa-solid fa-arrow-right"></i></button>
-                </div>
-
-                <div class="subject-card glass-effect" data-subject="maths">
-                    <div class="card-icon math-color"><i class="fa-solid fa-square-root-variable"></i></div>
-                    <h3>question bank</h3>
-                    <p>if anything goes wrong, dm me i will fix it</p>
-                    <button class="btn ghost-btn"><a href="www.gg.com">View Notes</a> <i class="fa-solid fa-arrow-right"></i></button>
-                </div>
-
-                <div class="subject-card glass-effect" data-subject="eee">
-                    <div class="card-icon eee-color"><i class="fa-solid fa-bolt"></i></div>
-                    <h3>EEE</h3>
-                    <p>Modules 1 to 5</p>
-                    <button class="btn ghost-btn"><a href="https://drive.google.com/drive/folders/12Z2YXb-GklA9oN8SjEmlnc5ypKQESvzY?usp=sharing">View Notes</a><i class="fa-solid fa-arrow-right"></i></button>
-                </div>
-
-                <div class="subject-card glass-effect" data-subject="ai">
-                    <div class="card-icon ai-color"><i class="fa-solid fa-brain"></i></div>
-                    <h3>Artificial Intelligence</h3>
-                    <p>Modules 1 to 5</p>
-                    <button class="btn ghost-btn"><a href="https://drive.google.com/drive/u/1/folders/1Xr6b0x4PFnm6fiu1CDtqfQb5RHHOOewb">View Notes</a><i class="fa-solid fa-arrow-right"></i></button>
-                </div>
-
-                <div class="subject-card glass-effect" data-subject="chemistry">
-                    <div class="card-icon chem-color"><i class="fa-solid fa-flask"></i></div>
-                    <h3>Chemistry</h3>
-                    <p>Modules 1 to 5</p>
-                    <button class="btn ghost-btn"><a href="https://drive.google.com/drive/u/1/folders/1T0YIEUShQGh4UlDvw6mBNJV4JCKVbM9u">View Notes</a><i class="fa-solid fa-arrow-right"></i></button>
-                </div>
-
-                <div class="subject-card glass-effect" data-subject="html">
-                    <div class="card-icon html-color"><i class="fa-brands fa-html5"></i></div>
-                    <h3>HTML</h3>
-                    <p>General Notes</p>
-                    <button class="btn ghost-btn">View Notes <i class="fa-solid fa-arrow-right"></i></button>
-                </div>
-
-                <div class="subject-card glass-effect" data-subject="css">
-                    <div class="card-icon css-color"><i class="fa-brands fa-css3-alt"></i></div>
-                    <h3>CSS</h3>
-                    <p>General Notes</p>
-                    <button class="btn ghost-btn">View Notes <i class="fa-solid fa-arrow-right"></i></button>
+                <div class="card-footer">
+                    <button class="btn btn-card view-notes-btn" data-subject="c">
+                        <span>View Notes</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
                 </div>
             </div>
+
+            <!-- Subject 2: Python Programming -->
+            <div class="subject-card" data-category="programming" data-title="python programming" data-subject-id="python">
+                <div class="card-top">
+                    <div class="subject-icon icon-bg-py">
+                        <i class="fa-brands fa-python"></i>
+                    </div>
+                    <span class="category-badge">Programming</span>
+                </div>
+                <div class="card-body">
+                    <h3>Python Programming</h3>
+                    <p>Module notes, Scribd references & Drive links.</p>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-card view-notes-btn" data-subject="python">
+                        <span>View Notes</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Subject 3: Mathematics & Question Bank -->
+            <div class="subject-card" data-category="science" data-title="mathematics question bank" data-subject-id="maths">
+                <div class="card-top">
+                    <div class="subject-icon icon-bg-math">
+                        <i class="fa-solid fa-square-root-variable"></i>
+                    </div>
+                    <span class="category-badge">Science & Math</span>
+                </div>
+                <div class="card-body">
+                    <h3>Question Bank & Math</h3>
+                    <p>Previous year question papers & solved examples.</p>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-card view-notes-btn" data-subject="maths">
+                        <span>View Notes</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Subject 4: Electrical Engineering (EEE) -->
+            <div class="subject-card" data-category="engineering" data-title="electrical engineering eee" data-subject-id="eee">
+                <div class="card-top">
+                    <div class="subject-icon icon-bg-eee">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <span class="category-badge">Core Engg</span>
+                </div>
+                <div class="card-body">
+                    <h3>Electrical Engg (EEE)</h3>
+                    <p>Modules 1 to 5 AC/DC circuits & machines notes.</p>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-card view-notes-btn" data-subject="eee">
+                        <span>View Notes</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Subject 5: Artificial Intelligence -->
+            <div class="subject-card" data-category="programming" data-title="artificial intelligence ai" data-subject-id="ai">
+                <div class="card-top">
+                    <div class="subject-icon icon-bg-ai">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <span class="category-badge">Programming</span>
+                </div>
+                <div class="card-body">
+                    <h3>Artificial Intelligence</h3>
+                    <p>Modules 1 to 5 AI search, logic & ML principles.</p>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-card view-notes-btn" data-subject="ai">
+                        <span>View Notes</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Subject 6: Engineering Chemistry -->
+            <div class="subject-card" data-category="science" data-title="engineering chemistry" data-subject-id="chemistry">
+                <div class="card-top">
+                    <div class="subject-icon icon-bg-chem">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+                    <span class="category-badge">Science & Math</span>
+                </div>
+                <div class="card-body">
+                    <h3>Engineering Chemistry</h3>
+                    <p>Modules 1 to 5 electrochemistry & lab notes.</p>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-card view-notes-btn" data-subject="chemistry">
+                        <span>View Notes</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Subject 7: Web Development -->
+            <div class="subject-card" data-category="programming" data-title="web development html css javascript" data-subject-id="webdev">
+                <div class="card-top">
+                    <div class="subject-icon icon-bg-web">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <span class="category-badge">Programming</span>
+                </div>
+                <div class="card-body">
+                    <h3>Web Development</h3>
+                    <p>HTML5, CSS3, JavaScript & modern web guides.</p>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-card view-notes-btn" data-subject="webdev">
+                        <span>View Notes</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Subject 8: Data Structures & Algorithms -->
+            <div class="subject-card" data-category="programming" data-title="data structures algorithms dsa" data-subject-id="dsa">
+                <div class="card-top">
+                    <div class="subject-icon icon-bg-dsa">
+                        <i class="fa-solid fa-diagram-project"></i>
+                    </div>
+                    <span class="category-badge">Programming</span>
+                </div>
+                <div class="card-body">
+                    <h3>Data Structures & Algo</h3>
+                    <p>Modules 1 to 5 stacks, queues, trees & graphs.</p>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-card view-notes-btn" data-subject="dsa">
+                        <span>View Notes</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
         </section>
+
+        <!-- Empty Search State -->
+        <div id="emptySearchState" class="empty-state hidden">
+            <div class="empty-icon"><i class="fa-solid fa-magnifying-glass-minus"></i></div>
+            <h3>No subject found</h3>
+            <p>Try searching for a different subject name.</p>
+            <button id="resetSearchBtn" class="btn btn-secondary">Reset Search</button>
+        </div>
     </main>
 
-    <footer id="contact">
-        <div class="glass-effect footer-container">
-            <div class="footer-grid">
-                <div class="footer-contact-form" class="fade-up delay-1">
-                    <h3>Get In Touch</h3>
-                    <form id="contactForm">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <textarea placeholder="Your Message" rows="3" required></textarea>
-                        <button type="submit" class="btn primary-btn fluid-btn">Send Message <i
-                                class="fa-solid fa-paper-plane"></i></button>
-                    </form>
-                </div>
-                <div class="footer-socials" class="fade-up delay-2">
-                    <h3>Connect With Me</h3>
-                    <p>Student at DVG. Feel free to reach out for collaboration or any queries!</p>
-                    <div class="social-links">
-                        <a href="https://github.com/jadarkaribasu02-beep" target="_blank" class="social-icon github"
-                            aria-label="GitHub">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                        <a href="https://instagram.com/karibasu02" target="_blank" class="social-icon instagram"
-                            aria-label="Instagram">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        <a href="mailto:jadarkaribasu02@gmail.com" class="social-icon gmail" aria-label="Gmail">
-                            <i class="fa-solid fa-envelope"></i>
-                        </a>
+    <!-- Footer with Developer Information & Social Links -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <div class="footer-profile">
+                    <div class="profile-avatar">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <div>
+                        <h3>Karibasu Jadar</h3>
+                        <p>CSE Student at JITD | Notes Hub Creator</p>
                     </div>
                 </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/jadarkaribasu02-beep" target="_blank" class="social-btn github" aria-label="GitHub Profile">
+                        <i class="fa-brands fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://instagram.com/karibasu02" target="_blank" class="social-btn instagram" aria-label="Instagram Profile">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="mailto:jadarkaribasu02@gmail.com" class="social-btn email" aria-label="Send Email">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                    <a href="https://jadarkaribasu02-beep.github.io/portfolioka/" target="_blank" class="social-btn portfolio" aria-label="Personal Portfolio">
+                        <i class="fa-solid fa-globe"></i>
+                        <span>Portfolio</span>
+                    </a>
+                </div>
             </div>
+
             <div class="footer-bottom">
-                <p>&copy; 2026 Karibasu Jadar.</p>
+                <p>&copy; 2026 <strong>NotesHub</strong>. Designed with <i class="fa-solid fa-heart heart-beat"></i> by <strong>Karibasu Jadar</strong>.</p>
             </div>
         </div>
     </footer>
 
-   
-   
+    <!-- Subject Notes Viewer Modal -->
+    <div id="notesModal" class="modal-backdrop">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <div id="modalSubjectIcon" class="modal-icon">
+                        <i class="fa-solid fa-book"></i>
+                    </div>
+                    <div>
+                        <h3 id="modalSubjectTitle">Subject Title</h3>
+                        <span id="modalSubjectBadge" class="category-badge">Category</span>
+                    </div>
+                </div>
+                <button id="closeModalBtn" class="modal-close-btn" aria-label="Close modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
 
+            <div class="modal-body" id="modalSubjectContent">
+                <!-- Dynamic Modules injected via JS -->
+            </div>
+
+            <div class="modal-footer">
+                <button id="modalActionBtn" class="btn btn-primary btn-block">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <span>Open Main Drive Folder</span>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
